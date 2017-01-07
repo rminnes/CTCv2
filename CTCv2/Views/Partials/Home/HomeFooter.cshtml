@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<CTCv2.Models.ViewModels.HomeVM>
+
+@{
+    var configNode = Umbraco.Content(1117);
+}
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+
+
+                    @foreach (var panel in Model.PanelTitles)
+                    {
+                        <li class="footer-menu-divider">
+                            <a href="#@panel">@panel</a>
+                        </li>
+                    }
+
+                </ul>
+
+                <p class="copyright text-muted small">@configNode.GetPropertyValue("footerMessage")</p>
+            </div>
+        </div>
+    </div>
+</footer>

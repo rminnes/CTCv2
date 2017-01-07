@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<IPublishedContent>
+<a name="@Model.GetPropertyValue("menuTitle")"></a>
+		<div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">@Model.GetPropertyValue("title")</h2>
+                    <p class="lead">@Model.GetPropertyValue("text")</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    
+                    <img class="img-responsive" src="@Umbraco.Media(Model.GetPropertyValue("Image")).Url" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>

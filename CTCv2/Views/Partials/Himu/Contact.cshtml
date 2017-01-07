@@ -1,0 +1,73 @@
+﻿@inherits UmbracoViewPage<CTCv2.Models.ViewModels.Himu.ContactVM>
+@using CTCv2.Controllers
+
+<div id="a-@Model.MenuTitle.Replace(" ", string.Empty)"></div>
+<section id="contact">
+    <div class="container">
+        <div class="row text-center clearfix">
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="contact-heading">
+                    <h2 class="title-one">@Model.Title</h2>
+                   @Html.Raw(Model.Text)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="contact-details">
+            <div class="pattern"></div>
+            <div class="row text-center clearfix">
+                @*<div class="col-sm-6">
+                    <div class="contact-address">
+                        <address><p>@Model.Address1</p><strong>@Model.Address1<br>@Model.Address2<br>@Model.Address3</strong><br><small>@Model.Address4</small></address>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                        <div id="contact-form-section">
+
+                            @if (Model.FormSent)
+                            {
+                                <div class="status alert alert-success">@Model.ThankYouMessage</div>
+                            }
+                            else
+                            {
+
+                                using (Html.BeginUmbracoForm("SendForm", "Contact", FormMethod.Post, new { @class = "contact", name = "contact-form", id = "contact-form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => Model.Name, new { @class = "form-control name-field", required = "required", placeholder = "Your Name", name = "name" })
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control mail-field" required="required" placeholder="Your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                    </div>
+                                }
+
+                            }
+
+
+
+                        </div>
+                    </div>
+
+                <div class="col-sm-3"></div>
+
+                </div>
+        </div>
+    </div>
+</section>

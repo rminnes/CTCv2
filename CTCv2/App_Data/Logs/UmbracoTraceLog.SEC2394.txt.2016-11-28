@@ -1,0 +1,4 @@
+﻿ 2016-11-28 09:09:01,830 [P33264/D2/T177] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-11-27 09:09:01
+ 2016-11-28 13:09:02,223 [P33264/D2/T177] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-11-27 13:09:02
+ 2016-11-28 17:09:02,137 [P33264/D2/T165] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-11-27 17:09:02
+ 2016-11-28 21:09:01,785 [P33264/D2/T165] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-11-27 21:09:01

@@ -1,0 +1,4 @@
+﻿ 2016-09-13 02:47:26,067 [P11224/D2/T182] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-12 02:47:26
+ 2016-09-13 06:47:25,881 [P11224/D2/T182] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-12 06:47:25
+ 2016-09-13 10:47:25,824 [P11224/D2/T106] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-12 10:47:25
+ 2016-09-13 14:47:25,086 [P11224/D2/T37] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-09-12 14:47:25

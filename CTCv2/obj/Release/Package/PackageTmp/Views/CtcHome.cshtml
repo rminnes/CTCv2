@@ -1,0 +1,81 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<CTCv2.Models.ViewModels.HomeVM>
+@{
+	Layout = "CTCMaster.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+
+    @{
+        var configNode = Umbraco.Content(1117); 
+    }
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="/">@configNode.GetPropertyValue("siteName")</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    @foreach (var panel in Model.PanelTitles)
+                    {
+                        <li>
+                            <a href="#@panel">@panel</a>
+                        </li>
+                    }
+
+
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Header -->
+    
+    @{Html.RenderPartial("Home/HomeHeader"); }
+    <!-- /.intro-header -->
+    <!-- Page Content -->
+    @foreach (var panel in Model.Panels)
+    {
+
+        switch(panel.DocumentTypeAlias)
+        {
+            case "textLeftImageRight":
+                Html.RenderPartial("Partials/Home/HomeImageRightTextLeft", panel);
+                break;
+            case "textRightImageLeft":
+                Html.RenderPartial("Partials/Home/HomeImageLeftTextRight", panel);
+                break;
+            case "contact":
+                Html.RenderPartial("Partials/Home/HomeConnect", panel);
+                break;
+        }
+
+
+    }
+
+    @*<a name="services"></a>
+         @{Html.RenderPartial("Home/HomeImageRightTextLeft"); }
+         <!-- /.content-section-a -->
+        @{Html.RenderPartial("Home/HomeImageLeftTextRight"); }
+         <!-- /.content-section-b -->
+         @{Html.RenderPartial("Home/HomeImageRightTextLeft"); }
+         <!-- /.content-section-a -->
+         <a name="contact"></a>
+         @{Html.RenderPartial("Home/HomeConnect"); }*@
+    <!-- /.banner -->
+    <!-- Footer -->
+    @{Html.RenderPartial("Home/HomeFooter", Model); }

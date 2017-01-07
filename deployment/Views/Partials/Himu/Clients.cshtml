@@ -1,0 +1,70 @@
+﻿@model CTCv2.Models.ViewModels.Himu.ClientsVM
+<div id="a-@Model.MenuTitle.Replace(" ", string.Empty)"></div>
+<section id="clients" class="parallax-section">
+    <div class="container">
+        <div class="clients-wrapper">
+            <div class="row text-center">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h2 class="title-one">@Model.Title</h2>
+                   @Html.Raw(Model.Text)
+                </div>
+            </div>
+            <div id="clients-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @{var count = 0;}
+                    @foreach (var itm in Model.ClientItems)
+                    {
+                        <li data-target="#clients-carousel" data-slide-to="@count" @if (count==0){
+                                                                                       count++;@:class="active"
+                                                                                   }></li>
+                    }
+
+                </ol> <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+
+                    @{var first=true ;}
+                    @foreach (var itm in Model.ClientItems)
+                    {
+
+
+                        <div class="item @if (first){first=false;@:active 
+                         }">
+
+                            <div class="single-client">
+                                <div class="media">
+                                    <img class="pull-left" src="@itm.Image" alt="" width="165" height="150">
+                                    <div class="media-body">
+                                        <blockquote><p>@itm.Text</p><small>Someone famous in Source Title</small><a href="">www.yourwebsite.com</a></blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    
+                    @*<div class="item">
+                            <div class="single-client">
+                                <div class="media">
+                                    <img class="pull-left" src="/assets/images/clients/client3.jpg" alt="">
+                                    <div class="media-body">
+                                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p><small>Someone famous in Source Title</small><a href="">www.yourwebsite.com</a></blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="single-client">
+                                <div class="media">
+                                    <img class="pull-left" src="/assets/images/clients/client2.jpg" alt="">
+                                    <div class="media-body">
+                                        <blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p><small>Someone famous in Source Title</small><a href="">www.yourwebsite.com</a></blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--/#clients-->

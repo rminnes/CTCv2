@@ -1,0 +1,51 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<CTCv2.Models.ViewModels.Himu.HimuHomeVM>
+              @using CTCv2.Models.ViewModels.Himu;
+    @{
+    Layout = "HimuMaster.cshtml";
+    }
+
+
+    @{Html.RenderPartial("Himu/Header", Model); } 
+
+
+
+@foreach (var panel in Model.Panels)
+{
+
+    switch (panel.DocumentTypeAlias)
+    {
+
+        case "himuTopPanel":
+            Html.RenderPartial("Partials/Himu/TopPanel", new TopPanelVM(panel));
+            break;
+        case "himuAboutUs":
+            Html.RenderPartial("Partials/Himu/AboutUs",new AboutUsVM( panel));
+            break;
+        case "himuBlog":
+            Html.RenderPartial("Partials/Himu/Blog", new BlogVM(panel));
+            break;
+        case "himuClients":
+            Html.RenderPartial("Partials/Himu/Clients",new ClientsVM( panel));
+            break;
+        case "himuContact":
+            Html.RenderPartial("Partials/Himu/Contact", new ContactVM(panel, Model.ContactFormSent));
+            break;
+        case "himuOurTeam":
+            Html.RenderPartial("Partials/Himu/OurTeam",new OurTeamVM( panel));
+            break;
+        case "himuPortfolio":
+            Html.RenderPartial("Partials/Himu/Portfolio", new PortfolioVM( panel));
+            break;
+        case "himuServices":
+            Html.RenderPartial("Partials/Himu/Services",new ServicesVM( panel));
+            break;
+
+
+    }
+
+
+}
+
+
+
+    @{Html.RenderPartial("Himu/Footer"); }

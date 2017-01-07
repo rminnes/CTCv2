@@ -1,0 +1,41 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows                              
+-------------------------------------------------------------------------------
+
+  Started : Mon Sep 05 15:00:01 2016
+
+   Source : C:\webs\CTCv2\CTCv2\bin\
+     Dest : C:\webs\CTCv2\CTCv2\App_Data\NuGetBackup\20160905-150001\bin\
+
+    Files : *.*
+	    
+  Options : *.* /S /E /COPY:DAT /R:1000000 /W:30 
+
+------------------------------------------------------------------------------
+
+	                  10	C:\webs\CTCv2\CTCv2\bin\
+	    New File  		  502272	Newtonsoft.Json.dll  0%   26%   52%   78%  100%  
+	    New File  		  185544	System.Net.Http.Formatting.dll  0%   70%  100%  
+	    New File  		  139976	System.Web.Helpers.dll  0%   93%  100%  
+	    New File  		  471240	System.Web.Http.dll  0%   27%   55%   83%  100%  
+	    New File  		   82120	System.Web.Http.WebHost.dll  0%  100%  
+	    New File  		  566472	System.Web.Mvc.dll  0%   46%   92%  100%  
+	    New File  		  272072	System.Web.Razor.dll  0%   48%   96%  100%  
+	    New File  		   41672	System.Web.Webpages.Deployment.dll  0%  100%  
+	    New File  		  211656	System.Web.Webpages.dll  0%   61%  100%  
+	    New File  		   39624	System.Web.Webpages.Razor.dll  0%  100%  
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :         1         0         1         0         0         0
+   Files :        10        10         0         0         0         0
+   Bytes :    2.39 m    2.39 m         0         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :             6409816 Bytes/sec.
+   Speed :             366.772 MegaBytes/min.
+
+   Ended : Mon Sep 05 15:00:02 2016

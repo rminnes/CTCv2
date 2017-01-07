@@ -1,0 +1,32 @@
+﻿@model CTCv2.Models.ViewModels.Himu.ServicesVM
+
+<div id="a-@Model.MenuTitle.Replace(" ", string.Empty)"></div>
+    <section id="services" class="parallax-section" style="background-image:url(@Model.Image);">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h2 class="title-one">@Model.Title</h2>
+                    @Html.Raw(Model.Text)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="our-service">
+                        <div class="services row">
+                            @foreach (var itm in Model.Services)
+                            {
+                                <div class="col-sm-4">
+                                    <div class="single-service">
+                                        <i class="fa @itm.FAIcon"></i>
+                                        <h2>@itm.Title</h2>
+                                        @Html.Raw(itm.Text)
+                                    </div>
+                                </div>
+                            }
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#service-->

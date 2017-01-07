@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<!-- home header Panel   background: url(@Umbraco.Media(CurrentPage.GetPropertyValue("bannerImage")).Url) no-repeat center center;-->
+
+<style>
+    .intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(@Umbraco.Media(CurrentPage.GetPropertyValue("bannerImage")).Url) no-repeat center center;
+    background-size: cover;
+}
+
+
+
+</style>
+
+	<div class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Creative Talent Connections</h1>
+                        <h3>Scottish Networking events for media professionals</h3>
+                        <hr class="intro-divider">
+                        @*<ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg">
+                                    <i class="fa fa-github fa-fw"></i> <span class="network-name">
+                                        Facebook
+                                    </span>
+                                </a>
+                            </li>
+                            @*<li>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+                        </ul>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>

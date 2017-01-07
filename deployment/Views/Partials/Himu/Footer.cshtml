@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var configNode = Umbraco.Content(1117);
+}
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="text-center">
+            <p>@configNode.GetPropertyValue("footerMessage")</p>
+        </div>
+    </div>
+</footer> <!--/#footer--> 

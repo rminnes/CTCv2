@@ -1,0 +1,28 @@
+﻿
+@model CTCv2.Models.ViewModels.Himu.TopPanelVM
+
+
+    <section id="home">
+        <div class="home-pattern"></div>
+        <div id="main-carousel" class="carousel slide" data-ride="carousel">
+            @*<ol class="carousel-indicators">
+                <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+            </ol>*@<!--/.carousel-indicators-->
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url(@Model.Image)">
+                    <div class="carousel-caption">
+                        <div>
+                            <h2 class="heading animated bounceInDown">@Model.Title</h2>
+                            <p class="animated bounceInUp">@Model.SubTitle</p>
+                            <a class="btn btn-default slider-btn animated fadeIn" href="@Model.Link">@Model.ButtonText</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!--/.carousel-inner-->
+
+            @*<a class="carousel-left member-carousel-control hidden-xs" href="#main-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+            <a class="carousel-right member-carousel-control hidden-xs" href="#main-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>*@
+        </div>
+
+    </section><!--/#home-->

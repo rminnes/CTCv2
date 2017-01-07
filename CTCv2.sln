@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTCv2", "CTCv2\CTCv2.csproj", "{FCE7F768-8CD0-4C8D-8F25-F02CC13DC15F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CTCv2.Tests", "CTCv2.Tests\CTCv2.Tests.csproj", "{6F65C6AB-E9AD-43ED-8E6B-F8D8A76E9193}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FCE7F768-8CD0-4C8D-8F25-F02CC13DC15F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCE7F768-8CD0-4C8D-8F25-F02CC13DC15F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCE7F768-8CD0-4C8D-8F25-F02CC13DC15F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCE7F768-8CD0-4C8D-8F25-F02CC13DC15F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F65C6AB-E9AD-43ED-8E6B-F8D8A76E9193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F65C6AB-E9AD-43ED-8E6B-F8D8A76E9193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F65C6AB-E9AD-43ED-8E6B-F8D8A76E9193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F65C6AB-E9AD-43ED-8E6B-F8D8A76E9193}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
